@@ -30,16 +30,29 @@ async function getZip(owner, repo, path, token) {
 				// eslint-disable-next-line no-unused-vars
 				Devs = eval('({' + Devs + '})');
 
-				const pluginsFolder = fs.readdirSync(`./tmp/${repoFolder}/src/plugins`).filter(file => file.endsWith('.ts' || '.tsx'));
+				const pluginsFolder = fs.readdirSync(`./tmp/${repoFolder}/src/plugins`);
 
 				const plugins = [];
 
 				console.log('Plugin names: ');
 
 				await pluginsFolder.forEach(async function(value, index) {
-					if (value === 'index.ts') return;
+					let fileContent;
 
-					const fileContent = (await fs.readFileSync(`./tmp/${repoFolder}/src/plugins/${value}`)).toString();
+					if (!value.endsWith('.ts') && !value.endsWith('.tsx')) {
+						if (fs.existsSync(`./tmp/${repoFolder}/src/plugins/${value}/index.ts`)) {
+							fileContent = (await fs.readFileSync(`./tmp/${repoFolder}/src/plugins/${value}/index.ts`)).toString();
+						}
+						else if (fs.existsSync(`./tmp/${repoFolder}/src/plugins/${value}/index.tsx`)) {
+							fileContent = (await fs.readFileSync(`./tmp/${repoFolder}/src/plugins/${value}/index.tsx`)).toString();
+						}
+						else {return;}
+					}
+					else {fileContent = (await fs.readFileSync(`./tmp/${repoFolder}/src/plugins/${value}`)).toString();}
+
+					if (!fileContent) return;
+
+					if (value === 'index.ts') return;
 
 					let pluginName = fileContent.match(/(?<=\({\s{1,8}name: ").*?(?=")/);
 					let pluginDescription = fileContent.match(/((?<=\s{1,8}description:.*?').*?(?='))|((?<=\s{1,8}description:.*?").*?(?="))/s);
@@ -68,7 +81,7 @@ async function getZip(owner, repo, path, token) {
 					template = template + `\n\n## ${value.pluginName}\n#### ${authors}\n${value.pluginDescription}`;
 				});
 
-				console.log(template);
+				// console.log(template);
 
 				fs.writeFileSync('./finished/finished.md', template);
 

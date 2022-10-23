@@ -38,6 +38,10 @@ Change GIF alt text from simply being 'GIF' to containing the gif tags / filenam
 #### [obscurity](https://discord.com/users/336678828233588736)
 Upload with a single click, open menu with right click
 
+## clearURLs
+#### [adryd](https://discord.com/users/0)
+Removes tracking garbage from URLs
+
 ## ClickableRoleDot
 #### [Vendicated](https://discord.com/users/343383572805058560)
 Makes RoleDots (Accessibility Feature) copy colour to clipboard on click
@@ -45,6 +49,10 @@ Makes RoleDots (Accessibility Feature) copy colour to clipboard on click
 ## ConsoleShortcuts
 #### [Vendicated](https://discord.com/users/343383572805058560)
 Adds shorter Aliases for many things on the window. Run `shortcutList` for a list.
+
+## Experiments
+#### [Megumin](https://discord.com/users/545581357812678656), [Vendicated](https://discord.com/users/343383572805058560), [Nickyux](https://discord.com/users/427146305651998721), [BanTheNons](https://discord.com/users/460478012794863637)
+Enable Access to Experiments in Discord!
 
 ## Fart2
 #### [Animal](https://discord.com/users/118437263754395652)
@@ -122,6 +130,10 @@ headpet a cutie
 #### [botato](https://discord.com/users/440990343899643943)
 Doesn't show the small guild icons in folders
 
+## PronounDB
+#### [Tyman](https://discord.com/users/487443883127472129)
+Adds pronouns to user messages using pronoundb
+
 ## Sendify
 #### [katlyn](https://discord.com/users/250322741406859265)
 Send your current Spotify music to chat
@@ -129,6 +141,10 @@ Send your current Spotify music to chat
 ## Settings
 #### [Vendicated](https://discord.com/users/343383572805058560), [Megumin](https://discord.com/users/545581357812678656)
 Adds Settings UI and debug info
+
+## ShowHiddenChannels
+#### [BigDuck](https://discord.com/users/1024588272623681609), [AverageReactEnjoyer](https://discord.com/users/1004904120056029256)
+Show hidden channels
 
 ## SilentTyping
 #### [Vendicated](https://discord.com/users/343383572805058560)
@@ -149,6 +165,10 @@ Simply uwuify commands
 ## vcDoubleClick
 #### [Vendicated](https://discord.com/users/343383572805058560)
 Join VCs via DoubleClick instead of single click
+
+## ViewIcons
+#### [Vendicated](https://discord.com/users/343383572805058560)
+Makes Avatars/Banners in user profiles clickable, and adds Guild Context Menu Entries to View Banner/Icon.
 
 ## Webhook Tags
 #### [Cynosphere](https://discord.com/users/150745989836308480)
